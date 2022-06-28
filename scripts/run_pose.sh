@@ -1,4 +1,4 @@
-export DATAROOT=...
+export DATAROOT='/home/user/YH/dressing-in-order/data2'
 
 python train.py --dataroot $DATAROOT \
 --name 'flownet_warmup' \

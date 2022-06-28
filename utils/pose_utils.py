@@ -1,9 +1,11 @@
 import numpy as np
 from scipy.ndimage.filters import gaussian_filter
-from skimage.draw import circle, line_aa, polygon
+from skimage.draw import  line_aa, polygon
+from skimage.draw import disk as circle
 import json
 
 import matplotlib
+import numpy as np
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
@@ -88,7 +90,7 @@ def draw_pose_from_cords(pose_joints, img_size, radius=2, draw_joints=True):
     for i, joint in enumerate(pose_joints):
         if pose_joints[i][0] == MISSING_VALUE or pose_joints[i][1] == MISSING_VALUE:
             continue
-        yy, xx = circle(joint[0], joint[1], radius=radius, shape=img_size)
+        yy, xx = circle((joint[0], joint[1]) ,radius=radius, shape=img_size)
         colors[yy, xx] = COLORS[i]
         mask[yy, xx] = True
 

@@ -27,7 +27,7 @@ def convert_file_name(catagory, fn):
     pass
     
 
-def make_dataset(dataroot):
+def make_dataset(dataroot='/home/user/YH/dressing-in-order/data2'):
     assert os.path.isdir(dataroot), '%s is not a valid directory' % dataroot
     
     # load data split from annotaton file

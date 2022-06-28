@@ -2,7 +2,7 @@ import torch
 import torch.nn.functional as F
 from tqdm import tqdm
 import numpy as np
-import imageio, os
+import os
 
 GID = [2,5,1,3]
 PID = [0,4,6,7]
